@@ -22,141 +22,210 @@ const fontScript = "'Pinyon Script', cursive";
 function Ornament({ light }) {
   const c = light ? goldLight : gold;
   return (
-    <div style={{ display:"flex", alignItems:"center", justifyContent:"center", gap:"1rem", margin:"2rem auto", maxWidth:300 }}>
-      <span style={{ flex:1, height:1, background:`linear-gradient(90deg, transparent, ${c}, transparent)` }} />
-      <span style={{ width:8, height:8, background:c, transform:"rotate(45deg)", flexShrink:0 }} />
-      <span style={{ flex:1, height:1, background:`linear-gradient(90deg, transparent, ${c}, transparent)` }} />
-    </div>
+    
+
+      
+      
+      
+    
+
   );
 }
 
 function SectionTitle({ subtitle, title, light }) {
   return (
     <>
-      {subtitle && <p style={{ fontFamily:fontBody, fontSize:"0.75rem", letterSpacing:"0.3em", textTransform:"uppercase", color: light ? goldLight : goldDark, textAlign:"center", marginBottom:"0.5rem", fontWeight:500 }}>{subtitle}</p>}
-      <h2 style={{ fontFamily:fontDisplay, fontSize:"clamp(2rem, 5vw, 3.2rem)", fontWeight:300, color: light ? ivory : forest, textAlign:"center", letterSpacing:"0.03em", margin:0 }}>{title}</h2>
-      <Ornament light={light} />
-    </>
+      {subtitle && 
+{subtitle}
+
+}
+      
+{title}
+
+      
+    
   );
 }
 
 function Hero() {
   return (
-    <section style={{
-      position:"relative", width:"100%", minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", overflow:"hidden",
-      background:`linear-gradient(160deg, #0f1f17 0%, ${forest} 20%, ${forestMid} 40%, ${forestLight} 55%, ${forestMid} 70%, ${forest} 85%, #0f1f17 100%)`
-    }}>
-      <div style={{ position:"absolute", inset:0, opacity:0.1, backgroundImage:`radial-gradient(ellipse at 25% 35%, ${goldLight} 0%, transparent 45%), radial-gradient(ellipse at 75% 65%, ${gold} 0%, transparent 40%), radial-gradient(ellipse at 50% 15%, rgba(255,255,255,0.08) 0%, transparent 35%)` }} />
-      <div style={{ position:"absolute", inset:0, background:`linear-gradient(180deg, rgba(15,31,23,0.25) 0%, rgba(15,31,23,0.05) 35%, rgba(15,31,23,0.15) 70%, rgba(15,31,23,0.45) 100%)` }} />
-      <div style={{ position:"relative", zIndex:2, textAlign:"center", padding:"2rem" }}>
-        <h1 style={{ fontFamily:fontDisplay, fontSize:"clamp(3rem, 8vw, 5.5rem)", fontWeight:300, color:goldLight, lineHeight:1.15, letterSpacing:"0.02em", margin:0 }}>
+    
+
+      
+
+      
+
+      
+
+        
+
           Caroline
-          <span style={{ fontFamily:fontScript, color:gold, fontSize:"0.6em", display:"block", margin:"-0.15em 0" }}>&</span>
+          &
           David
-        </h1>
-        <p style={{ fontFamily:fontBody, fontSize:"clamp(0.7rem, 2vw, 0.95rem)", color:goldLight, letterSpacing:"0.35em", textTransform:"uppercase", marginTop:"1.5rem", fontWeight:400 }}>24th October 2026</p>
-        <p style={{ fontFamily:fontDisplay, fontSize:"clamp(0.85rem, 2vw, 1.1rem)", color:"rgba(237,232,220,0.75)", fontWeight:300, fontStyle:"italic", marginTop:"0.5rem" }}>
-          St Michael's Parish Church, Linlithgow&ensp;•&ensp;The Signet Library, Edinburgh
-        </p>
-      </div>
-      <div style={{ position:"absolute", bottom:"2rem", left:"50%", transform:"translateX(-50%)", zIndex:2 }}>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={goldLight} strokeWidth="2" strokeLinecap="round" opacity="0.6"><path d="M12 5v14M5 12l7 7 7-7" /></svg>
-      </div>
-    </section>
+        
+
+        
+24th October 2026
+
+
+        
+
+          St Michael's Parish Church, Linlithgow • The Signet Library, Edinburgh
+        
+
+
+      
+
+      
+
+        
+      
+
+    
+
   );
 }
 
 function Welcome() {
   return (
-    <section style={{ padding:"5rem 1.5rem", background:ivory }}>
-      <div style={{ maxWidth:800, margin:"0 auto" }}>
-        <SectionTitle title="We're Getting Married" />
-        <p style={{ fontFamily:fontDisplay, fontSize:"clamp(1.1rem, 2.5vw, 1.3rem)", color:charcoalLight, textAlign:"center", lineHeight:1.9, fontWeight:400, maxWidth:650, margin:"0 auto" }}>
-          We are delighted to invite you to share in our wedding day. We'll begin with a ceremony at the magnificent medieval St&nbsp;Michael's Parish Church in Linlithgow, before travelling to Edinburgh for an evening of celebration at The Signet Library.
-        </p>
-        <p style={{ fontFamily:fontDisplay, fontSize:"clamp(1.15rem, 2.5vw, 1.35rem)", color:forest, textAlign:"center", lineHeight:1.9, fontWeight:500, maxWidth:650, margin:"1.5rem auto 0", fontStyle:"italic" }}>
+    
+
+      
+
+        
+        
+
+          We are delighted to invite you to share in our wedding day. We'll begin with a ceremony at the magnificent medieval St Michael's Parish Church in Linlithgow, before travelling to Edinburgh for an evening of celebration at The Signet Library.
+        
+
+
+        
+
           It means the world to have you with us — we can't wait.
-        </p>
-      </div>
-    </section>
+        
+
+
+      
+
+    
+
   );
 }
 
 function TimelineItem({ time, desc }) {
   return (
-    <div style={{ display:"flex", alignItems:"baseline", gap:"1rem", marginBottom:"0.4rem" }}>
-      <span style={{ fontFamily:fontDisplay, fontSize:"1.05rem", color:goldLight, fontWeight:500, minWidth:"4.5rem", textAlign:"right", flexShrink:0 }}>{time}</span>
-      <span style={{ fontSize:"0.9rem", color:ivory, fontWeight:300, lineHeight:1.6 }}>{desc}</span>
-    </div>
+    
+
+      {time}
+      {desc}
+    
+
   );
 }
 
 function TimelinePhase({ title, location, items, note }) {
   return (
-    <div style={{ marginBottom:"2.5rem", position:"relative", paddingLeft:"3rem" }}>
-      <div style={{ position:"absolute", left:0, top:"0.55rem", width:9, height:9, background:gold, borderRadius:"50%" }} />
-      <h3 style={{ fontFamily:fontDisplay, fontSize:"1.4rem", color:goldLight, fontWeight:400, marginBottom:"0.75rem" }}>{title}</h3>
-      {location && <p style={{ fontSize:"0.75rem", letterSpacing:"0.15em", textTransform:"uppercase", color:sage, marginBottom:"0.75rem", fontWeight:400 }}>{location}</p>}
-      {items.map((item, i) => <TimelineItem key={i} {...item} />)}
-      {note && <p style={{ fontSize:"0.8rem", color:"rgba(237,232,220,0.55)", fontStyle:"italic", marginTop:"0.3rem", marginLeft:"5.5rem" }}>{note}</p>}
-    </div>
+    
+
+      
+
+      
+{title}
+
+      {location && 
+{location}
+
+}
+      {items.map((item, i) => )}
+      {note && 
+{note}
+
+}
+    
+
   );
 }
 
 function Schedule() {
   return (
-    <section style={{ padding:"5rem 1.5rem", background:forest, color:ivory, position:"relative", overflow:"hidden" }}>
-      <div style={{ position:"absolute", inset:0, background:`radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.06) 0%, transparent 50%), radial-gradient(ellipse at 80% 30%, rgba(201,168,76,0.04) 0%, transparent 50%)` }} />
-      <div style={{ maxWidth:800, margin:"0 auto", position:"relative" }}>
-        <SectionTitle subtitle="Saturday, 24th October 2026" title="Order of the Day" light />
-        <div style={{ position:"relative", maxWidth:600, margin:"3rem auto 0" }}>
-          <div style={{ position:"absolute", left:0, top:0, bottom:0, width:1, background:`linear-gradient(180deg, transparent, ${gold}, ${gold}, transparent)` }} />
-          <TimelinePhase title="The Ceremony" location="St Michael's Parish Church, Kirkgate, Linlithgow EH49 7AL"
-            items={[{ time:"1:15 pm", desc:"Wedding ceremony begins" }, { time:"2:00 pm", desc:"Ceremony concludes" }]}
-            note="A coach will transport guests from St Michael's Parish Church to the Signet Library" />
-          <TimelinePhase title="Drinks & Canapé Reception" location="Lower Library, The Signet Library, Edinburgh"
-            items={[{ time:"3:30 pm", desc:"Guests arrive at The Signet Library" }, { time:"", desc:"Drinks and canapés in the Lower Library" }]} />
-          <TimelinePhase title="Wedding Breakfast" location="Upper Library, The Signet Library"
-            items={[{ time:"4:45 pm", desc:"Call for dinner" }, { time:"5:00 pm", desc:"Speeches" }, { time:"5:30 pm", desc:"Dinner is served" }]} />
-          <TimelinePhase title="Evening Reception" location="The Signet Library"
-            items={[{ time:"7:15 pm", desc:"Evening guests arrive • Tea, coffee & cake cutting" }, { time:"8:15 pm", desc:"First dance in the Upper Library" }, { time:"9:45 pm", desc:"Evening buffet" }, { time:"11:40 pm", desc:"Last orders" }, { time:"Midnight", desc:"Carriages" }]} />
-        </div>
-      </div>
-    </section>
+    
+
+      
+
+      
+
+        
+        
+
+          
+
+          
+          
+          
+          
+        
+
+      
+
+    
+
   );
 }
 
 function DressCode() {
   return (
-    <section style={{ padding:"5rem 1.5rem", background:ivoryWarm }}>
-      <div style={{ maxWidth:800, margin:"0 auto" }}>
-        <SectionTitle subtitle="What to Wear" title="Dress Code" />
-        <div style={{ background:"white", maxWidth:550, margin:"2rem auto 0", padding:"2.5rem 2rem", textAlign:"center", border:`1px solid ${cream}`, boxShadow:"0 4px 30px rgba(0,0,0,0.04)" }}>
-          <p style={{ fontFamily:fontDisplay, fontSize:"1.8rem", color:forest, fontWeight:400, marginBottom:"0.5rem" }}>Smart Formal</p>
-          <p style={{ fontSize:"0.95rem", color:charcoalLight, fontWeight:300, lineHeight:1.8 }}>We want you to feel wonderful. Suits, dresses, and cocktail attire are all perfect.</p>
-          <p style={{ display:"inline-block", marginTop:"1rem", padding:"0.5rem 1.5rem", border:`1px solid ${gold}`, color:goldDark, fontFamily:fontDisplay, fontSize:"1rem", fontStyle:"italic", fontWeight:400 }}>Kilts are very much encouraged</p>
-        </div>
-      </div>
-    </section>
+    
+
+      
+
+        
+        
+
+          
+Smart Formal
+
+
+          
+We want you to feel wonderful. Suits, dresses, and cocktail attire are all perfect.
+
+
+          
+Kilts are very much encouraged
+
+
+        
+
+      
+
+    
+
   );
 }
 
 function TaxiCard({ name, phone, tel }) {
   return (
-    <div style={{ background:"rgba(255,255,255,0.04)", border:`1px solid rgba(201,168,76,0.2)`, padding:"1.2rem 1rem", textAlign:"center", flex:"1 1 180px" }}>
-      <h4 style={{ fontFamily:fontDisplay, fontSize:"1rem", color:ivory, fontWeight:500, marginBottom:"0.3rem" }}>{name}</h4>
-      <a href={`tel:${tel}`} style={{ color:goldLight, textDecoration:"none", fontSize:"0.9rem", fontWeight:400 }}>{phone}</a>
-    </div>
+    
+
+      
+{name}
+
+      {phone}
+    
+
   );
 }
 
 function HotelCard({ name, discount, children }) {
   return (
-    <div style={{ background:"rgba(255,255,255,0.04)", border:`1px solid rgba(201,168,76,0.2)`, padding:"1.5rem", textAlign:"center", flex:"1 1 230px" }}>
-      <h4 style={{ fontFamily:fontDisplay, fontSize:"1.1rem", color:ivory, fontWeight:500, marginBottom:"0.4rem" }}>{name}</h4>
-      <span style={{ display:"inline-block", background:gold, color:forest, fontSize:"0.65rem", letterSpacing:"0.15em", textTransform:"uppercase", padding:"0.25rem 0.6rem", fontWeight:600, marginBottom:"0.5rem" }}>{discount}</span>
+    
+
+      
+{name}
+
+      {discount}
       {children}
-    </div>
+    
+
   );
 }
 
@@ -168,114 +237,228 @@ function Travel() {
   const linkStyle = { display:"inline-block", color:goldLight, fontSize:"0.72rem", letterSpacing:"0.12em", textTransform:"uppercase", fontWeight:500, textDecoration:"none", borderBottom:"1px solid rgba(201,168,76,0.3)", paddingBottom:2, marginTop:"0.5rem" };
 
   return (
-    <section style={{ padding:"5rem 1.5rem", background:forest, color:ivory, position:"relative", overflow:"hidden" }}>
-      <div style={{ position:"absolute", inset:0, background:`radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.05) 0%, transparent 60%)` }} />
-      <div style={{ maxWidth:800, margin:"0 auto", position:"relative" }}>
-        <SectionTitle subtitle="Getting There" title="Travel" light />
+    
 
-        <div style={{ marginBottom:"3rem" }}>
-          <h3 style={{ fontFamily:fontDisplay, fontSize:"1.5rem", color:goldLight, fontWeight:400, marginBottom:"1rem", textAlign:"center" }}>The Ceremony — St Michael's Parish Church, Linlithgow</h3>
-          <p style={pStyle}>Our ceremony takes place at <span style={hl}>St&nbsp;Michael's Parish Church, Kirkgate, Linlithgow EH49&nbsp;7AL</span> — one of Scotland's finest medieval churches, consecrated in 1242 and favoured by generations of Scottish monarchs. It stands beside the magnificent ruins of Linlithgow Palace, birthplace of Mary, Queen of Scots, overlooking Linlithgow Loch.</p>
-          <p style={{ ...pStyle, marginTop:"1rem" }}>If you're arriving early, we'd encourage you to <span style={hl}>take a look around the church and palace grounds</span>. You may also want to stop for a drink at <span style={hl}>The Four Marys</span> on the High Street or <span style={hl}>Platform 3</span> by the station — both are within five minutes' walk of the church.</p>
-          <p style={{ ...pStyle, marginTop:"1.5rem" }}><strong style={strong}>By train:</strong> Linlithgow is a short direct journey from Edinburgh — approximately <span style={hl}>20 minutes from Waverley</span> or <span style={hl}>Haymarket</span> stations, with trains running every 20 minutes. St Michael's Parish Church is a 5-minute walk from Linlithgow station along the High Street.</p>
-          <p style={{ ...pStyle, marginTop:"1rem" }}><strong style={strong}>By taxi from Edinburgh:</strong> The journey takes around 30 minutes. We recommend pre-booking, especially on a Saturday.</p>
-          <div style={{ display:"flex", gap:"1rem", flexWrap:"wrap", maxWidth:650, margin:"1.5rem auto 0" }}>
-            <TaxiCard name="City Cabs" phone="0131 228 1211" tel="+441312281211" />
-            <TaxiCard name="Central Taxis" phone="0131 229 2468" tel="+441312292468" />
-            <TaxiCard name="All The Fives" phone="0131 555 5555" tel="+441315555555" />
-          </div>
-          <p style={{ textAlign:"center", fontSize:"0.82rem", color:"rgba(237,232,220,0.55)", fontStyle:"italic", marginTop:"1rem" }}>Pre-booking is strongly recommended, especially on a Saturday.</p>
-        </div>
+      
 
-        <div style={{ marginBottom:"3rem" }}>
-          <h3 style={{ fontFamily:fontDisplay, fontSize:"1.5rem", color:goldLight, fontWeight:400, marginBottom:"1rem", textAlign:"center" }}>After the Ceremony</h3>
-          <p style={pStyle}>A <span style={hl}>coach will be provided</span> to take guests from St&nbsp;Michael's Parish Church to The Signet Library in Edinburgh following the ceremony. You do not need to arrange your own transport for this journey.</p>
-        </div>
+      
 
-        <div style={{ marginBottom:"3rem" }}>
-          <h3 style={{ fontFamily:fontDisplay, fontSize:"1.5rem", color:goldLight, fontWeight:400, marginBottom:"1rem", textAlign:"center" }}>Friday Night — The Night Before</h3>
-          <p style={pStyle}>For those arriving in Edinburgh on the Friday, we'll be arranging an <span style={hl}>informal get-together on Friday evening</span> so you can catch up with old friends and meet new ones before the big day. Details to follow — watch this space!</p>
-        </div>
+        
 
-        <div style={{ marginBottom:"3rem" }}>
-          <h3 style={{ fontFamily:fontDisplay, fontSize:"1.5rem", color:goldLight, fontWeight:400, marginBottom:"1rem", textAlign:"center" }}>Where to Stay</h3>
-          <p style={pStyle}>The following hotels offer special discounted rates for our wedding guests. All are within easy reach of The Signet Library in central Edinburgh.</p>
-          <div style={{ display:"flex", gap:"1.25rem", flexWrap:"wrap", maxWidth:700, margin:"1.5rem auto 0" }}>
-            <HotelCard name="Virgin Hotel Edinburgh" discount="20% off">
-              <p style={smallP}>Discount applied automatically via link.</p>
-              <a href="https://virginhotels.com/edinburgh/reservations#/booking/step-1?promo=SignetLibrary" target="_blank" rel="noopener" style={linkStyle}>Book Now</a>
-            </HotelCard>
-            <HotelCard name="Fraser Suites Edinburgh" discount="12% off">
-              <p style={smallP}>Quote our wedding when booking.</p>
-              <p style={smallP}>Tel: 0131 221 7200</p>
-              <p style={smallP}>groups.uk@frasershospitality.com</p>
-            </HotelCard>
-            <HotelCard name="Malmaison / Hotel du Vin" discount="10% off">
-              <p style={smallP}>Use code: <strong style={{ color:goldLight }}>HERPF900</strong></p>
-              <p style={smallP}>lmacrae@malmaison.com</p>
-            </HotelCard>
-            <HotelCard name="Apex Hotels" discount="10% off">
-              <p style={smallP}>Use code: <strong style={{ color:goldLight }}>PRESTIGE10</strong></p>
-              <a href="https://book.apexhotels.co.uk/ibe/index.aspx?propertyID=16321&nono=1&promo=prestige10" target="_blank" rel="noopener" style={linkStyle}>Book Now</a>
-            </HotelCard>
-          </div>
-          <p style={{ textAlign:"center", fontSize:"0.82rem", color:"rgba(237,232,220,0.55)", fontStyle:"italic", marginTop:"1rem" }}>Edinburgh is busy in October — we recommend booking accommodation early.</p>
-        </div>
-      </div>
-    </section>
+        
+
+          
+The Ceremony — St Michael's Parish Church, Linlithgow
+
+          
+Our ceremony takes place at St Michael's Parish Church, Kirkgate, Linlithgow EH49 7AL — one of Scotland's finest medieval churches, consecrated in 1242 and favoured by generations of Scottish monarchs. It stands beside the magnificent ruins of Linlithgow Palace, birthplace of Mary, Queen of Scots, overlooking Linlithgow Loch.
+
+
+          
+If you're arriving early, we'd encourage you to take a look around the church and palace grounds. You may also want to stop for a drink at The Four Marys on the High Street or Platform 3 by the station — both are within five minutes' walk of the church.
+
+
+          
+By train: Linlithgow is a short direct journey from Edinburgh — approximately 20 minutes from Waverley or Haymarket stations, with trains running every 20 minutes. St Michael's Parish Church is a 5-minute walk from Linlithgow station along the High Street.
+
+
+          
+By taxi from Edinburgh: The journey takes around 30 minutes. We recommend pre-booking, especially on a Saturday.
+
+
+          
+
+            
+            
+            
+          
+
+          
+Pre-booking is strongly recommended, especially on a Saturday.
+
+
+        
+
+
+        
+
+          
+After the Ceremony
+
+          
+A coach will be provided to take guests from St Michael's Parish Church to The Signet Library in Edinburgh following the ceremony. You do not need to arrange your own transport for this journey.
+
+
+        
+
+
+        
+
+          
+Friday Night — The Night Before
+
+          
+For those arriving in Edinburgh on the Friday, we'll be arranging an informal get-together on Friday evening so you can catch up with old friends and meet new ones before the big day. Details to follow — watch this space!
+
+
+        
+
+
+        
+
+          
+Where to Stay
+
+          
+The following hotels offer special discounted rates for our wedding guests. All are within easy reach of The Signet Library in central Edinburgh.
+
+
+          
+
+            
+              
+Discount applied automatically via link.
+
+
+              Book Now
+            
+            
+              
+Quote our wedding when booking.
+
+
+              
+Tel: 0131 221 7200
+
+
+              
+groups.uk@frasershospitality.com
+
+
+            
+            
+              
+Use code: HERPF900
+
+
+              
+lmacrae@malmaison.com
+
+
+            
+            
+              
+Use code: PRESTIGE10
+
+
+              Book Now
+            
+          
+
+          
+Edinburgh is busy in October — we recommend booking accommodation early.
+
+
+        
+
+      
+
+    
+
   );
 }
 
 function RSVP() {
   return (
-    <section style={{ padding:"5rem 1.5rem", background:ivory }}>
-      <div style={{ maxWidth:800, margin:"0 auto" }}>
-        <SectionTitle subtitle="Will You Join Us?" title="RSVP" />
-        <div style={{ maxWidth:500, margin:"2rem auto 0", padding:"2.5rem 2rem", background:"white", border:`1px solid ${cream}`, textAlign:"center" }}>
-          <p style={{ fontFamily:fontDisplay, fontSize:"1.2rem", color:charcoalLight, lineHeight:1.8, fontWeight:400 }}>Your Google Form RSVP will be embedded here.</p>
-          <p style={{ fontSize:"0.85rem", color:charcoalLight, fontWeight:300, marginTop:"1rem" }}>Questions will include: guest names, attendance, dietary requirements, and whether you require a seat on the coach from Linlithgow.</p>
-        </div>
-        <p style={{ textAlign:"center", fontSize:"0.8rem", color:charcoalLight, marginTop:"1.5rem", fontStyle:"italic" }}>Please respond by September 2026</p>
-      </div>
-    </section>
+    
+
+      
+
+        
+        
+
+          
+Your Google Form RSVP will be embedded here.
+
+
+          
+Questions will include: guest names, attendance, dietary requirements, and whether you require a seat on the coach from Linlithgow.
+
+
+        
+
+        
+Please respond by September 2026
+
+
+      
+
+    
+
   );
 }
 
 function GiftOption({ icon, title, desc }) {
   return (
-    <div style={{ background:"white", padding:"2rem 1.5rem", textAlign:"center", border:`1px solid ${cream}`, flex:"1 1 200px" }}>
-      <div style={{ fontSize:"1.8rem", marginBottom:"0.75rem", color:forestLight }}>{icon}</div>
-      <h3 style={{ fontFamily:fontDisplay, fontSize:"1.15rem", fontWeight:500, color:forest, marginBottom:"0.5rem" }}>{title}</h3>
-      <p style={{ fontSize:"0.85rem", color:charcoalLight, fontWeight:300, lineHeight:1.6 }}>{desc}</p>
-      <a href="#" style={{ display:"inline-block", marginTop:"0.75rem", color:goldDark, fontSize:"0.75rem", letterSpacing:"0.15em", textTransform:"uppercase", fontWeight:500, textDecoration:"none", borderBottom:`1px solid ${gold}`, paddingBottom:2 }}>Details coming soon</a>
-    </div>
+    
+
+      
+{icon}
+
+      
+{title}
+
+      
+{desc}
+
+
+      Details coming soon
+    
+
   );
 }
 
 function Gifts() {
   return (
-    <section style={{ padding:"5rem 1.5rem", background:ivoryWarm }}>
-      <div style={{ maxWidth:800, margin:"0 auto" }}>
-        <SectionTitle subtitle="With Love" title="Gifts" />
-        <p style={{ fontFamily:fontDisplay, fontSize:"clamp(1.05rem, 2vw, 1.2rem)", color:charcoalLight, textAlign:"center", lineHeight:1.9, fontWeight:400, maxWidth:620, margin:"0 auto" }}>
+    
+
+      
+
+        
+        
+
           Your presence at our wedding is a gift in itself. However, for those who have kindly asked, we have a few suggestions below.
-        </p>
-        <div style={{ display:"flex", gap:"1.5rem", flexWrap:"wrap", maxWidth:700, margin:"2.5rem auto 0" }}>
-          <GiftOption icon="♡" title="Charity Donation" desc="A donation to MS UK or Brain Tumour Research in lieu of a gift would mean the world to us." />
-          <GiftOption icon="✈" title="Honeymoon Fund" desc="Contribute to our honeymoon adventure — help us create memories to last a lifetime." />
-          <GiftOption icon="✧" title="Gift List" desc="We also have a small gift list for those who prefer to give a gift." />
-        </div>
-      </div>
-    </section>
+        
+
+
+        
+
+          
+          
+          
+        
+
+      
+
+    
+
   );
 }
 
 function Footer() {
   return (
-    <footer style={{ background:forest, borderTop:`1px solid rgba(201,168,76,0.2)`, padding:"3rem 1.5rem", textAlign:"center" }}>
-      <p style={{ fontFamily:fontScript, fontSize:"2.5rem", color:goldLight, marginBottom:"0.5rem" }}>Caroline & David</p>
-      <p style={{ fontFamily:fontBody, fontSize:"0.7rem", letterSpacing:"0.3em", textTransform:"uppercase", color:"rgba(237,232,220,0.45)" }}>24 • 10 • 2026</p>
-    </footer>
+    
+
+      
+Caroline & David
+
+
+      
+24 • 10 • 2026
+
+
+    
+
   );
 }
 
@@ -289,15 +472,18 @@ export default function WeddingWebsite() {
   }, []);
 
   return (
-    <div style={{ fontFamily:fontBody, color:charcoal, background:ivory, fontWeight:300, lineHeight:1.7, WebkitFontSmoothing:"antialiased", margin:0, padding:0 }}>
-      <Hero />
-      <Welcome />
-      <Schedule />
-      <DressCode />
-      <Travel />
-      <RSVP />
-      <Gifts />
-      <Footer />
-    </div>
+    
+
+      
+      
+      
+      
+      
+      
+      
+      
+
+    
+
   );
 }
